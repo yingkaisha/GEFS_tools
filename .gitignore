@@ -1,7 +1,8 @@
 *.png
-*.log
-*.err
-x_*
+
+# author's testing scripts
+*TEST*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
