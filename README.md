@@ -1,2 +1,11 @@
 # GEFS_tools
-Tools for accessing the operational GEFS inventories through the NCEP NOMADS server.
+
+This repository contains tools for accessing and processing GEFS forecasts
+
+## The `GEFS` folder
+
+...
+
+## The `NAEFS` folder
+
+...
