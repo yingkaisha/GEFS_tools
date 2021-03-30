@@ -1,6 +1,8 @@
 
 # local path that stores GEFS files. 
 # Formatter is the name of sub-folder.
+
+# change is as: 'your_path/{}/'
 target_path = '/glade/scratch/ksha/DATA/GEFS/{}/'
 
 # The source of files. Formatter is the file name 
