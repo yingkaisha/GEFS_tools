@@ -6,21 +6,26 @@
 #     Download the ensemble mean.
 #     (Planned) subset to given variables and domain.
 
-download_log='GEFS_download.log'
-current_time=$(date -u +%Y%m%d)
+echo
+echo "[`date +"%F %T %Z"`] Starting ${0} ..."
 
-while [ 1 -le 2 ]
-do
-    python GEFS_download.py $current_time
+current_time=$(date -u +%Y%m%d)
+download_status="/home/ibcs/GEFS0p25/${current_time}/download.status"
+run=true
+
+while $run; do
+    python3 /home/ibcs/bin/GEFS_tools/GEFS/GEFS_download.py $current_time
     
-    log_info=$(cat $download_log)
+    log_info=$(cat $download_status)
     flag_success=$[10#${log_info:0:2}]
     
     if [ $flag_success == "0" ]; then
-        echo "GEFS_download.py: pending on new files. Sleep 30 min ..."
+        echo "No new files, waiting 30 min ..."
         sleep 1800
     else
-        echo "GEFS_download.py: completed."
-        exit 1
+        run=false
     fi
 done
+
+echo "[`date +"%F %T %Z"`] ${0} is done."
+exit 0
