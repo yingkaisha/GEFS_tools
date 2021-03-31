@@ -9,3 +9,8 @@ Download the GEFS ensemble mean fields from the NOAA Operational Model Archive a
 **`main.sh`**
 
 The main routine. Proposed as a daily cron job at the WFRT servers. 
+
+# Contributors
+
+* Kyle Sha <yingkai@eoas.ubc.ca>
+* Roland Schigas
