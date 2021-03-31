@@ -1,9 +1,9 @@
-
 # local path that stores GEFS files. 
 # Formatter is the name of sub-folder.
 
-# change is as: 'your_path/{}/'
-target_path = '/glade/scratch/ksha/DATA/GEFS/{}/'
+# change is as: 'your_path/{}'
+#target_path = '/glade/scratch/ksha/DATA/GEFS/{}'
+target_path = '/home/ibcs/GEFS0p25/{}'
 
 # The source of files. Formatter is the file name 
 url_fmt = 'https://nomads.ncep.noaa.gov/pub/data/nccf/com/gens/prod/gefs.{}/00/atmos/pgrb2sp25/{}'
@@ -19,4 +19,11 @@ fcst_leads = ['009', '012', '015', '018', '021', '024', '027', '030', '033', '03
          '126', '129', '132', '135', '138', '141', '144', '147', '150', '153', '156', '159', '162',
          '165', '168']
 
+# log path
+log_path = '/home/ibcs/log'
 
+# Overall time to wait before giving up, in hours
+ELAPSED_TIME = 6
+
+# Time to wait between download attempts, in seconds
+WAIT_TIME = 60
