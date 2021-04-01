@@ -10,6 +10,16 @@ Download the GEFS ensemble mean fields from the NOAA Operational Model Archive a
 
 The main routine. Proposed as a daily cron job at the WFRT servers. 
 
+# Usage
+
+1. Modify the `namelist.py` to specify the target driectory, NOMADS urls, and file prefix.
+3. Execute `main.sh`
+
+# Dependency
+* Bash
+* Python 3.6
+
+
 # Contributors
 
 * Kyle Sha <yingkai@eoas.ubc.ca>
