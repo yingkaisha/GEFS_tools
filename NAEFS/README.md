@@ -25,7 +25,7 @@ into `netCDF4` with user-defined variables, ensemble members, and spatial-tempor
 # Contributors
 
 * Justin Haw
-* Kyle Sha <yingkai@eoas.ubc.ca>
+* Yingkai (Kyle) Sha <yingkai@eoas.ubc.ca>
 * Eve Wicksteed
 
 # Further readings
