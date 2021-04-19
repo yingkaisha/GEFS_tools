@@ -19,8 +19,10 @@ The main routine. Proposed as a daily cron job at the WFRT servers.
 * Bash
 * Python 3.6
 
-
 # Contributors
 
 * Kyle Sha <yingkai@eoas.ubc.ca>
 * Roland Schigas
+
+# Overview
+
