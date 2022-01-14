@@ -10,11 +10,24 @@ echo
 echo "[`date +"%F %T %Z"`] Starting ${0} ..."
 
 current_time=$(date -u +%Y%m%d)
-download_status="/home/ibcs/GEFS0p25/${current_time}/download.status"
+
+# ---------- UBC/NCAR Switch ---------- #
+# UBC
+#download_status="/home/ibcs/GEFS0p25/${current_time}/download.status"
+# NCAR
+download_status="/glade/scratch/ksha/DATA/GEFS/${current_time}/download.status"
+# ------------------------------------- #
+
 run=true
 
 while $run; do
-    python3 /home/ibcs/bin/GEFS_tools/GEFS/GEFS_download.py $current_time
+
+    # ---------- UBC/NCAR Switch ---------- #
+    # UBC
+    #python3 /home/ibcs/bin/GEFS_tools/GEFS/GEFS_download.py $current_time
+    # NCAR
+    python3 /glade/u/home/ksha/PUBLISH/GEFS_tools/GEFS/GEFS_download.py $current_time
+    # ------------------------------------- #
     
     log_info=$(cat $download_status)
     flag_success=$[10#${log_info:0:2}]
