@@ -2,8 +2,10 @@
 # Formatter is the name of sub-folder.
 
 # change is as: 'your_path/{}'
-#target_path = '/glade/scratch/ksha/DATA/GEFS/{}'
-target_path = '/home/ibcs/GEFS0p25/{}'
+## NCAR
+target_path = '/glade/scratch/ksha/DATA/GEFS/{}'
+## UBC
+#target_path = '/home/ibcs/GEFS0p25/{}'
 
 # The source of files. Formatter is the file name 
 url_fmt = 'https://nomads.ncep.noaa.gov/pub/data/nccf/com/gens/prod/gefs.{}/00/atmos/pgrb2sp25/{}'
