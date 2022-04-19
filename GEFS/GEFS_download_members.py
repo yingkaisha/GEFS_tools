@@ -31,19 +31,25 @@ else:
 # downloading status
 status = 0
 
-for lead_ in fcst_leads:
+for lead_ in fcst_leads[::-1][4:]:
     
-    filename_ = filename.format(lead_)
-    print("Downloading {}".format(filename_))
-    
-    try:    
-        urllib.request.urlretrieve(url_fmt.format(dt_fmt, filename_), os.path.join(target_dir, filename_));
-        status = 1
-    except:
-        # if file access is not successful, terminate all downloads
-        print("{} is not available".format(filename_))
-        status = 0
-        break;
+    for member_ in range(N_member):
+        
+        if member_ == 0:
+            filename_ = filename_memberc.format(member_, lead_)
+        else:
+            filename_ = filename_memberp.format(member_, lead_)
+        
+        print("Downloading {}".format(filename_))
+
+        try:
+            urllib.request.urlretrieve(url_fmt.format(dt_fmt, filename_), os.path.join(target_dir, filename_));
+            status = 1
+        except:
+            # if file access is not successful, terminate all downloads
+            print("{} is not available".format(filename_))
+            status = 0
+            break;
         
 with open("{}/download.status".format(target_dir), "w") as log_io:
     log_io.write(str(status))

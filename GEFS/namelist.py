@@ -4,6 +4,8 @@
 # change is as: 'your_path/{}'
 ## NCAR
 target_path = '/glade/scratch/ksha/DATA/GEFS/{}'
+target_path = '/glade/scratch/ksha/DATA/GEFS/{}_members'
+
 ## UBC
 #target_path = '/home/ibcs/GEFS0p25/{}'
 
@@ -13,6 +15,10 @@ url_fmt = 'https://nomads.ncep.noaa.gov/pub/data/nccf/com/gens/prod/gefs.{}/00/a
 # The file name of GEFS ensemble mean.
 # Formatter is the forecast lead time
 filename = 'geavg.t00z.pgrb2s.0p25.f{}'
+filename_memberc = 'gec{:02d}.t00z.pgrb2s.0p25.f{}'
+filename_memberp = 'gep{:02d}.t00z.pgrb2s.0p25.f{}'
+
+N_member = 30
 
 # A list of forecast lead times.
 fcst_leads = ['009', '012', '015', '018', '021', '024', '027', '030', '033', '036', '039', '042', '045',
